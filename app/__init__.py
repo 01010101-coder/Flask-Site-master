@@ -5,6 +5,7 @@ from flask_migrate import Migrate
 
 App = Flask(__name__)
 App.config.from_object(Configuration)
-db = SQLAlchemy(App, db)
+db = SQLAlchemy(App)
+migrate = Migrate(App, db)
 
 from app import routes
