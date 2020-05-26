@@ -7,6 +7,7 @@ from flask_login import UserMixin
 def load_user(id):
     return User.query.get(int(id))
 
+
 class User(UserMixin, db.Model):
     """ описываю таблицу, в которой будут храниться данные пользователей """
     id = db.Column(db.Integer, primary_key=True)
